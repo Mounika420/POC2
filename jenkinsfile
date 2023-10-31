@@ -9,6 +9,12 @@ agent any
             steps {
                git branch: 'main', url: 'https://github.com/Mounika420/POC2.git'
         }
+       
+        }
+        stage('email notification'){
+            steps{
+             emailext body: 'HI team, The Pipeline is started.', subject: 'Raptar Provising', to: 'mounika.b879@gmail.com'
+            }
         }
         stage('terraform init') {
             steps {

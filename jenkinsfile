@@ -4,7 +4,6 @@ pipeline {
        AWS_SECRET_ACCESS_KEY = credentials('AWS_SECRET_ACCESS_KEY')
     }
 agent any
-try{
       stages {
        
         stage('Checkout Git') {
@@ -30,8 +29,6 @@ try{
             }
         }
     }
-}catch (Err){
-        emailext body: "${Err}", subject: 'Raptar Provising', to: 'mounika.b879@gmail.com'
 } 
-}
+
 

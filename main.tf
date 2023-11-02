@@ -8,7 +8,7 @@ resource "aws_instance" "multiple_apps" {
     instance_type = "t2.micro"
     vpc_security_group_ids = [aws_security_group.allow_ssh.id]
     tags = {
-        Name="Raptrdxp"
+        Name="Dynamic_Instance"
     }
     key_name = "keypair"
     connection {
